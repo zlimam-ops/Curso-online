@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Instituto Tecnológico Aurora | Cursos en línea</title>
+<link rel="stylesheet" href="css/fondo.css">
+<link rel="stylesheet" href="css/estilos.css">
+<link rel="stylesheet" href="fondo.css" type="text/css"/>
+<link rel="stylesheet" href="Estilos.css" type="text/css">
+<link rel="stylesheet" href="Estilos.css" type="text/css"/>
+
+
+
+</head>
+<body>
+
+<!-- 1. INICIO -->
+<section id="inicio" class="pantalla activa">
+  <header class="hero">
+    <div class="container"></div>
+    <div class="hero-texto">
+      <h1>Instituto Tecnológico Aurora</h1>
+      <p>Aprende tecnología a tu ritmo, desde donde estés.</p>
+      <a href="#cursos" class="btn">Ver cursos</a>
+    </div>
+  </header>
+
+  <main class="ancho">
+    <h2 id="cursos">Cursos disponibles</h2>
+    <div class="rejilla">
+      <article class="tarjeta"><h3>Desarrollo Web: HTML, CSS y JavaScript</h3><p>Crea tu primer sitio web desde cero. 3 módulos, evaluación y diploma.</p><strong>Disponible ahora</strong></article>
+      <article class="tarjeta apagada"><h3>Bases de datos con SQL</h3><p>Diseño y consultas para principiantes.</p><strong>Próximamente</strong></article>
+      <article class="tarjeta apagada"><h3>Introducción a Java</h3><p>Programación orientada a objetos.</p><strong>Próximamente</strong></article>
+    </div>
+
+    <h2>Inscripción</h2>
+    <form id="formRegistro" class="formulario">
+      <label>Nombres <input name="nombre" required minlength="2"></label>
+      <label>Apellidos <input name="apellido" required minlength="2"></label>
+      <label>Correo electrónico <input name="correo" type="email" required></label>
+      <label>Edad <input name="edad" type="number" min="10" max="99" required></label>
+      <label>País
+        <select name="pais" required>
+          <option value="">Selecciona</option><option>Guatemala</option><option>México</option>
+          <option>El Salvador</option><option>Honduras</option><option>Otro</option>
+        </select>
+      </label>
+      <label>Curso
+        <select name="curso" required><option>Desarrollo Web: HTML, CSS y JavaScript</option></select>
+      </label>
+      <button class="btn" type="submit">Inscribirme</button>
+    </form>
+  </main>
+</section>
+
+<!-- 2. DATOS DEL REGISTRO -->
+<section id="datos" class="pantalla">
+  <div class="ancho caja">
+    <h2>Inscripción completada</h2>
+    <dl id="listaDatos"></dl>
+    <button class="btn" id="btnCurso">Acceder al curso</button>
+  </div>
+</section>
+
+<!-- 3. CURSO -->
+<section id="curso" class="pantalla">
+  <div class="ancho caja contenido">
+    <h2>Desarrollo Web: HTML, CSS y JavaScript</h2>
+
+    <h3>Módulo 1: HTML, la estructura</h3>
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/HTML5_logo_and_wordmark.svg" alt="Logo de HTML5" width="160">
+    <p>HTML (HyperText Markup Language) describe el contenido de una página mediante etiquetas como <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;img&gt;</code> y <code>&lt;a&gt;</code>. Los encabezados van de <code>h1</code> a <code>h6</code>. Los hipervínculos usan el atributo <code>href</code>.
+    Referencia: <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noopener">MDN: HTML</a>.</p>
+
+    <h3>Módulo 2: CSS, el estilo</h3>
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/CSS3_logo_and_wordmark.svg" alt="Logo de CSS3" width="160">
+    <p>CSS controla colores, tipografía y distribución. Por ejemplo, <code>background-color</code> cambia el color de fondo y <code>display:flex</code> alinea elementos.
+    Referencia: <a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank" rel="noopener">MDN: CSS</a>.</p>
+
+    <h3>Módulo 3: JavaScript, el comportamiento</h3>
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Unofficial_JavaScript_logo_2.svg" alt="Logo de JavaScript" width="120">
+    <p>JavaScript se ejecuta en el navegador y permite reaccionar a eventos. Tipos de datos básicos: <code>string</code>, <code>number</code> y <code>boolean</code>. Para seleccionar un elemento por su id se usa <code>document.getElementById()</code>.
+    Referencia: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank" rel="noopener">MDN: JavaScript</a>.</p>
+
+    <h3>Video de apoyo</h3>
+    <div class="video"><iframe src="https://www.youtube.com/embed/pQN-pnXPaVg" title="Curso de HTML" allowfullscreen loading="lazy"></iframe></div>
+
+    <button class="btn" id="btnEval">Ir a la evaluación</button>
+  </div>
+</section>
+
+<!-- 4. EVALUACIÓN -->
+<section id="evaluacion" class="pantalla">
+  <form id="formEval" class="ancho caja">
+    <h2>Evaluación</h2>
+    <p>8 preguntas, 12.5 puntos cada una. Se aprueba con 70 o más.</p>
+
+    <fieldset><legend>1. ¿Qué significa HTML? (una opción)</legend>
+      <label><input type="radio" name="p1" value="a"> HyperText Markup Language</label>
+      <label><input type="radio" name="p1" value="b"> High Tech Modern Language</label>
+      <label><input type="radio" name="p1" value="c"> Hyper Transfer Mark Link</label>
+    </fieldset>
+
+    <fieldset><legend>2. Marca todas las etiquetas HTML (varias opciones)</legend>
+      <label><input type="checkbox" name="p2" value="a"> &lt;a&gt;</label>
+      <label><input type="checkbox" name="p2" value="img"> &lt;img&gt;</label>
+      <label><input type="checkbox" name="p2" value="p"> &lt;p&gt;</label>
+      <label><input type="checkbox" name="p2" value="color"> color:red</label>
+    </fieldset>
+
+    <fieldset><legend>3. Propiedad CSS para el color de fondo (lista desplegable)</legend>
+      <select name="p3"><option value="">Selecciona</option><option value="a">font-color</option><option value="b">background-color</option><option value="c">text-style</option></select>
+    </fieldset>
+
+    <fieldset><legend>4. Tipos de datos de JavaScript (cuadro de lista, Ctrl para varios)</legend>
+      <select name="p4" multiple size="4"><option value="string">string</option><option value="number">number</option><option value="boolean">boolean</option><option value="char">char</option></select>
+    </fieldset>
+
+    <fieldset><legend>5. ¿Qué atributo define el destino de un hipervínculo? (texto)</legend>
+      <input type="text" name="p5" placeholder="Escribe el atributo">
+    </fieldset>
+
+    <fieldset><legend>6. Verdadero o falso: JavaScript solo funciona en servidores.</legend>
+      <label><input type="radio" name="p6" value="v"> Verdadero</label>
+      <label><input type="radio" name="p6" value="f"> Falso</label>
+    </fieldset>
+
+    <fieldset><legend>7. ¿Cuántos niveles de encabezado existen en HTML? (control numérico)</legend>
+      <input type="number" name="p7" min="1" max="10">
+    </fieldset>
+
+    <fieldset><legend>8. Método para seleccionar un elemento por su id (lista desplegable)</legend>
+      <select name="p8"><option value="">Selecciona</option><option value="a">getElementById</option><option value="b">selectId</option><option value="c">findById</option></select>
+    </fieldset>
+
+    <button class="btn" type="submit">Enviar respuestas</button>
+  </form>
+</section>
+
+<!-- 5. RESULTADO Y DIPLOMA -->
+<section id="resultado" class="pantalla">
+  <div class="ancho caja">
+    <h2>Resultado</h2>
+    <p class="nota" id="nota"></p>
+    <p id="mensaje"></p>
+    <div id="diploma" class="diploma" hidden>
+      <p>El Instituto Tecnológico Aurora otorga el presente</p>
+      <h1>Diploma de aprobación</h1>
+      <p>a</p>
+      <h2 id="dipNombre"></h2>
+      <p>por completar el curso <strong>Desarrollo Web: HTML, CSS y JavaScript</strong><br>con una calificación de <strong id="dipNota"></strong> / 100</p>
+      <p id="dipFecha"></p>
+      <p class="folio" id="dipFolio"></p>
+    </div>
+    <div class="acciones">
+      <button class="btn" id="btnImprimir" hidden>Imprimir diploma</button>
+      <button class="btn sec" id="btnReiniciar">Volver al inicio</button>
+    </div>
+  </div>
+</section>
+
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+:root{--fondo:#15110f;--papel:#f6efe4;--tinta:#241b16;--acento:#b22222;--acento2:#ff6347;--arena:#d2b48c}
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia,"Times New Roman",serif;background:var(--fondo);color:var(--papel);line-height:1.6}
+h1,h2,h3,.btn,label,legend{font-family:"Trebuchet MS",Verdana,sans-serif}
+a{color:var(--acento2)}
+.pantalla{display:none}.pantalla.activa{display:block}
+
+/* Hero con el fondo de Uiverse */
+.hero{position:relative;height:440px;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center}
+.hero .container{position:absolute;inset:0}
+.hero-texto{position:relative;z-index:2;padding:0 1rem;text-shadow:0 2px 12px #000}
+.hero h1{font-size:clamp(2rem,6vw,3.6rem);margin:0 0 .4rem}
+.hero p{font-size:1.2rem;margin:0 0 1.4rem}
+
+.ancho{max-width:900px;margin:0 auto;padding:2rem 1rem}
+.caja{background:var(--papel);color:var(--tinta);margin:2rem auto;border-radius:6px;padding:2rem}
+.caja a{color:var(--acento)}
+h2{border-bottom:3px solid var(--acento);padding-bottom:.3rem}
+.rejilla{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-bottom:2rem}
+.tarjeta{background:#231b17;border-left:5px solid var(--acento2);padding:1rem 1.2rem}
+.tarjeta h3{margin:.2rem 0}
+.tarjeta.apagada{border-left-color:#555;opacity:.6}
+
+.formulario{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}
+label{display:flex;flex-direction:column;gap:.3rem;font-weight:bold}
+input,select{font:inherit;padding:.5rem;border:2px solid #7c2020;border-radius:4px;background:#fff;color:var(--tinta)}
+input:focus-visible,select:focus-visible,.btn:focus-visible{outline:3px solid var(--acento2);outline-offset:2px}
+.btn{background:var(--acento);color:#fff;border:0;padding:.8rem 1.6rem;font-size:1rem;font-weight:bold;border-radius:4px;cursor:pointer;text-decoration:none;display:inline-block}
+.btn:hover{background:#871a1a}
+.btn.sec{background:#555}
+.formulario .btn{grid-column:1/-1;justify-self:start}
+
+dl{display:grid;grid-template-columns:auto 1fr;gap:.4rem 1.2rem}
+dt{font-weight:bold}dd{margin:0}
+
+.contenido img{display:block;margin:.5rem 0;background:#fff;padding:6px;border-radius:4px}
+code{background:#e9dcc7;padding:0 .3rem;border-radius:3px}
+.video{position:relative;padding-top:56.25%;margin:1rem 0 1.5rem}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+fieldset{border:2px solid var(--arena);margin:1rem 0;padding:1rem}
+fieldset label{flex-direction:row;align-items:center;font-weight:normal}
+legend{font-weight:bold;padding:0 .4rem}
+
+.nota{font-size:3rem;font-weight:bold;margin:.2rem 0;font-family:"Trebuchet MS",sans-serif}
+.nota.ok{color:#2e7d32}.nota.mal{color:var(--acento)}
+.diploma{border:10px double var(--acento);padding:2rem;text-align:center;margin:1.5rem 0;background:#fffaf0}
+.diploma h1{color:var(--acento);margin:.3rem 0}
+.diploma h2{border:0;font-size:2rem;margin:.2rem 0}
+.folio{font-size:.8rem;color:#777}
+.acciones{display:flex;gap:1rem;flex-wrap:wrap}
+
+@media (prefers-reduced-motion:reduce){.container:before,.container:after{animation:none}}
+@media print{body{background:#fff}.pantalla{display:none!important}#resultado{display:block!important}#resultado>.caja>*:not(#diploma){display:none!important}.caja{margin:0;padding:0}}
+
+/* Adelanta la animación de Uiverse para que la linterna se vea al cargar */
+.hero .container:before,.hero .container:after{animation-delay:-7.6s}
